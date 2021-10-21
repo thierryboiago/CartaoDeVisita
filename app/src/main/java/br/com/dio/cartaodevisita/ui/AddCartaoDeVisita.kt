@@ -47,12 +47,12 @@ class AddCartaoDeVisita : AppCompatActivity() {
 
             //aqui ele pega os tipos obitidos pela api
             val jsonObj = JSONObject(json)
-            val foodJson = jsonObj.getJSONArray("types")
+            val typesJson = jsonObj.getJSONArray("types")
             var contador =0
             var tipo1 = ""
             var tipo2 = ""
-            for (i in 0..foodJson!!.length() - 1) {
-                val types = JSONObject(foodJson.getJSONObject(i).getString("type"))
+            for (i in 0..typesJson!!.length() - 1) {
+                val types = JSONObject(typesJson.getJSONObject(i).getString("type"))
                 println("tipo: "+types.getString("name"))
                 if(contador == 0){
                     tipo1 = types.getString("name")
