@@ -18,12 +18,13 @@ class PokemonRepository(private val dao: PokemonDAO) {
 
     fun getAll() = dao.getAll()
 
-    private val _s2 = MutableLiveData<List<Pokemon>>()
-    val s2: LiveData<List<Pokemon>>
-        get() = _s2
+    private val _listaPokemon = MutableLiveData<List<Pokemon>>()
+
+    val listaPokemon: LiveData<List<Pokemon>>
+        get() = _listaPokemon
 
     init {
-        _s2.value = listOf()
+        _listaPokemon.value = listOf()
     }
 
     fun populateList() {
@@ -45,7 +46,7 @@ class PokemonRepository(private val dao: PokemonDAO) {
             )
 
             lista.add(pokemon)
-            _s2.value = _s2.value?.plus(pokemon)
+            _listaPokemon.value = _listaPokemon.value?.plus(pokemon)
 
             println("\n-------------------------------------------------------------------\n")
             println("pokemon: "+resultsJsonPokedex.getJSONObject(i).getString("name"))

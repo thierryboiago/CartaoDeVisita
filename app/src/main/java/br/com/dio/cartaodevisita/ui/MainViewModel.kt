@@ -20,7 +20,7 @@ class MainViewModel(private val pokemonRepository: PokemonRepository): ViewModel
 
     fun getAllPokemonList(): LiveData<List<Pokemon>> {
         pokemonRepository.populateList()
-        return pokemonRepository.s2
+        return pokemonRepository.listaPokemon
     }
 
 }
