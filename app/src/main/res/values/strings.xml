@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Pokedex</string>
     <string name="label_pokedex">Meus Pokemons</string>
+    <string name="label_share_to">Compartilhar</string>
+
+    <string name="label_add_pokemon">Adicionar Pokemon</string>
+
+    <string name="label_nome">Nome</string>
+
+    <string name="label_show_success">Registro inserido com sucesso.</string>
 </resources>
